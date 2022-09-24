@@ -1,6 +1,6 @@
 # Space Shooter
 
-Project 02 for BL-MSCH-C220 at Indiana University, created September 21, 2022
+Project 02 for BL-MSCH-C220 at Indiana University, created September 21, 2022 and completed September 24, 2022
 
 A simple 2D space shooter
 
@@ -18,7 +18,7 @@ https://opengameart.org/content/space-background-1
 https://fontlibrary.org/en/font/dogica
 
 ## Future Development
-Sound effects and music?
+None
 
 ## Created by
 Bryce Cain
