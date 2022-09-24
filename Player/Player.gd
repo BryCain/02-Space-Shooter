@@ -7,7 +7,7 @@ var rot_speed = 5.0
 
 var nose = Vector2(0,-60)
 
-var health = 1.0
+var health = 10.0
 
 onready var Bullet = load("res://Player/Bullet.tscn")
 onready var Explosion = load("res://Effects/Explosion.tscn")
@@ -60,5 +60,5 @@ func damage(d):
 func _on_Area2D_body_entered(body):
 	if body.name != "Player":
 		if body.has_method("damage"):
-			damage(100)
-		damage(100)
+			damage(10)
+		damage(10)

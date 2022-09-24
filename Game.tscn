@@ -1,12 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Player_Container.gd" type="Script" id=1]
 [ext_resource path="res://Asteroid/Asteroid_Container.gd" type="Script" id=2]
 [ext_resource path="res://Enemy/Enemy_Container.gd" type="Script" id=3]
 [ext_resource path="res://UI/Game.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Background.png" type="Texture" id=5]
+[ext_resource path="res://Assets/dogicapixelbold.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://UI/Pause_Menu.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
 
 [node name="Player_Container" type="Node2D" parent="."]
 script = ExtResource( 1 )
@@ -34,6 +48,7 @@ color = Color( 0, 0, 0, 0.25098 )
 margin_left = 5.0
 margin_right = 505.0
 margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
 text = "Score:"
 valign = 1
 
@@ -43,6 +58,10 @@ anchor_right = 1.0
 margin_left = -500.0
 margin_right = -5.0
 margin_bottom = 40.0
+custom_fonts/font = SubResource( 2 )
 text = "Lives: "
 align = 2
 valign = 1
+
+[node name="Pause_Menu" parent="UI" instance=ExtResource( 7 )]
+visible = false
