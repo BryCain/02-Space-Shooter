@@ -61,4 +61,3 @@ func _on_Area2D_body_entered(body):
 	if body.name != "Player":
 		if body.has_method("damage"):
 			damage(10)
-		damage(10)
